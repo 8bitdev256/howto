@@ -1,4 +1,4 @@
-#Criar chave SSH na conta do GitHub
+# Criar chave SSH na conta do GitHub
 
 - Na conta do GitHub, acessar Settings -> SSH and GPG keys -> clicar no link "Generating SSH keys" ou "connecting to GitHub using SSH keys";
  - Clicar no link "Verificar se há chaves SSH"
