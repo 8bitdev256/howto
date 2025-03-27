@@ -1,0 +1,4 @@
+- Tech Talk: Linux Torvalds on git: https://youtu.be/4XpnKHJAok8
+- Pro Git: https://git-scm.com/book/en/v2
+- Markdown: https://docs.github.com/pt/get-started/writing-on-github
+- Conventional Commits: https://github.com/conventional-commits/conventionalcommits.org
