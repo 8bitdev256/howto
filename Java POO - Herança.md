@@ -11,7 +11,7 @@ public class Moto extends Veiculo {
 
 ### Sealed, Non-Sealed e Final
 
-Vamos supor que você queira que uma classe sua seja a última da hierarquia a ser herdada e portanto, deseje que nenhuma outra classe possa estendê-la (herdar seus atributos e métodos).
+Vamos supor que você deseje que uma classe seja a última da hierarquia a ser herdada e, portanto, deseje que nenhuma outra classe possa estendê-la (herdar seus atributos e métodos).
 
 Para que isso seja possível, vamos usar o cenário abaixo como exemplo.
 
@@ -55,7 +55,7 @@ public sealed abstract class Employee permits Manager, Salesman {
 }
 ```
 
-Mas e as subclasses? Bom, aí já vai depender de como você deseja que elas se comportem, mas uma das palavras reservadas a seguir elas precisam possuir caso usa classe pai seja `sealed`:
+Mas e as subclasses? Bom, aí já vai depender de como você deseja que elas se comportem, mas uma das palavras reservadas a seguir elas precisam possuir caso sua classe pai seja `sealed`:
 
 `Final`: As subclasses `Manager` e `Salesman` não podem ser herdadas por outras classes, conforme visto anteriormente;
 `Non-sealed`: As subclasses `Manager` e `Salesman` podem ser herdadas por outras classes;
