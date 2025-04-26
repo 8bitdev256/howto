@@ -108,3 +108,93 @@ public static void printEmployee(Employee employee) {
   }
 }
 ```
+
+### Switch
+
+Apenas uma observação sobre as classes `sealed`, é que se você utilizar um switch em uma variável que é do tipo da classe pai (`Employee`, por exemplo) que é `sealed`, mas pode ser uma instância de alguma subclasse (`Manager` ou `Salesman`, por exemplo), não há a necessidade de uso da palavra reservada `default` no switch, pois na classe pai já foram definidas as classes permitidas para herança. Portanto, essa variável só pode ser uma instância das classes permitidas (`Manager` ou `Salesman`). O switch só vai exigir que você implemente o case das classes permitidas neste caso.
+
+### Super
+
+Palavra reservada utilizada geralmente em herança/abstração. Serve geralmente para chamar o construtor da classe pai. Quando você trabalha com classes seladas (sealed), e cria um construtor na classe pai que possui argumentos, você precisa criar também um construtor nas classes filhas, que chamará o construtor da classe pai, conforme abaixo:
+
+```
+public sealed abstract class Employee permits Manager, Salesman {
+  //Propriedades
+
+  public Employee(String code, String name) {
+    this.code = code;
+    this.name = name;
+  }
+
+  //Métodos
+}
+
+public non-sealed class Manager extends Employee {
+  //Propriedades
+
+  public Manager(String code, String name) {
+    super(code, name);
+  }
+
+  //Métodos
+}
+
+public non-sealed class Salesman extends Employee {
+  //Propriedades
+
+  public Salesman(String code, String name) {
+    super(code, name);
+  }
+
+  //Métodos
+}
+```
+
+Referente ao exemplo das nossas classes Employee, Manager e Salesman, vamos supor que você queira adicionar um prefixo ao código do funcionário quando ele for vendedor ou gerente, como 'MN' para Manager e 'SL' para Salesman:
+
+```
+public sealed abstract class Employee permits Manager, Salesman {
+  //Propriedades
+
+  public Employee(String code, String name) {
+    this.code = code;
+    this.name = name;
+  }
+
+  public String getCode() {
+    return this.code;
+  }
+
+  //Métodos
+}
+
+public non-sealed class Manager extends Employee {
+  //Propriedades
+
+  public Manager(String code, String name) {
+    super(code, name);
+  }
+
+  @Override
+  public String getCode() {
+    return 'MN' + super.getCode();
+  }
+
+  //Métodos
+}
+
+public non-sealed class Salesman extends Employee {
+  //Propriedades
+
+  public Salesman(String code, String name) {
+    super(code, name);
+  }
+
+  @Override
+  public String getCode() {
+    return 'SL' + super.getCode();
+  }
+
+  //Métodos
+}
+```
