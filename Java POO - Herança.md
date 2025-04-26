@@ -177,7 +177,7 @@ public non-sealed class Manager extends Employee {
 
   @Override
   public String getCode() {
-    return 'MN' + super.getCode();
+    return "MN" + super.getCode();
   }
 
   //Métodos
@@ -192,7 +192,7 @@ public non-sealed class Salesman extends Employee {
 
   @Override
   public String getCode() {
-    return 'SL' + super.getCode();
+    return "SL" + super.getCode();
   }
 
   //Métodos
