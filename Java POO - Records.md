@@ -1,6 +1,6 @@
 ### Records
 
- - Entrou no Java na versão 14 (não LTS) e na versão 17 (LTS). Funcionam de forma semelhante a uma classe, mas só permitem criação de atributos não estáticos informados no seu construtor. A própria declaração da classe já é o construtor
+ - Entrou no Java na versão 14 (não LTS) e na versão 17 (LTS). Funcionam de forma semelhante a uma classe, mas só permitem criação de atributos não estáticos informados no seu construtor, além de não poderem instanciar outras classes. A própria declaração da classe já é o construtor
 
 Exemplo 1:
 
