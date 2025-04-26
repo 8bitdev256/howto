@@ -81,9 +81,30 @@ public class Main {
   }
 
   public static void printEmployee(Employee employee) {
+  
+    System.out.prinln(employee.getClass().getCanonicalName())
+    
     if (employee instanceof Manager) {
-      //Do something
+      employee.setName("João");
+      ((Manager) employee).setLogin("joao");
+      ((Manager) employee).setPassword("123456");
     }
+  }
+
+}
+```
+
+No Java 16 (não LTS) e no 17 (LTS) e também em versões acima, você não precisa mais fazer o casting conforme código acima do método `printEmployee`. Basta fazer como o código abaixo:
+
+```
+public static void printEmployee(Employee employee) {
+
+  System.out.prinln(employee.getClass().getCanonicalName())
+  
+  if (employee instanceof Manager manager) {
+    employee.setName("João");
+    manager.setLogin("joao");
+    manager.setPassword("123456");
   }
 }
 ```
