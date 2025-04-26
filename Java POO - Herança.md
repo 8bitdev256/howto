@@ -62,3 +62,28 @@ Mas e as subclasses? Bom, aí já vai depender de como você deseja que elas se 
 `Non-sealed`: As subclasses `Manager` e `Salesman` podem ser herdadas por outras classes;
 
 `Sealed`: As subclasses `Manager` e `Salesman` podem ser instanciadas por outras classes, desde que você as informe depois da palavra reservada `permits`.
+
+### Instance of
+
+Palavra reservada utilizada para descobrir se a variável é uma instância de uma classe espeífica:
+
+```
+public abstract class Employee {
+  //...Propriedades e métodos...
+}
+
+public class Manager extends Employee {
+  //...Propriedades e métodos...
+}
+
+public class Main {
+  public static void Main(String[] args) {
+  }
+
+  public static void printEmployee(Employee employee) {
+    if (employee instanceof Manager) {
+      //Do something
+    }
+  }
+}
+```
