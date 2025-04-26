@@ -58,5 +58,7 @@ public sealed abstract class Employee permits Manager, Salesman {
 Mas e as subclasses? Bom, aí já vai depender de como você deseja que elas se comportem, mas uma das palavras reservadas a seguir elas precisam possuir caso sua classe pai seja `sealed`:
 
 `Final`: As subclasses `Manager` e `Salesman` não podem ser herdadas por outras classes, conforme visto anteriormente;
+
 `Non-sealed`: As subclasses `Manager` e `Salesman` podem ser herdadas por outras classes;
+
 `Sealed`: As subclasses `Manager` e `Salesman` podem ser instanciadas por outras classes, desde que você as informe depois da palavra reservada `permits`.
