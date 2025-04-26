@@ -109,6 +109,40 @@ public static void printEmployee(Employee employee) {
 }
 ```
 
+Quando a variável é uma instância de uma subclasse (`Salesman` ou `Manager`), mas esta subclasse herda de uma superclasse (`Employee`) e você tenta verificar se ela é uma instância da superclasse, será retornado True também. Só para o contrário que ela retornará False, pois a superclase não herda nada de uma subclasse:
+
+```
+public abstract class Employee {
+  //...Propriedades e métodos...
+}
+
+public class Manager extends Employee {
+  //...Propriedades e métodos...
+}
+
+public class Main {
+  public static void Main(String[] args) {
+    Employee employee = new Employee();
+    Employee manager = new Manager();
+    System.out.prinln(manager instanceof Manager); //retorna True
+    System.out.prinln(manager instanceof Employee); //retorna True
+    System.out.prinln(employee instanceof Manager); //retorna False
+  }
+
+  public static void printEmployee(Employee employee) {
+  
+    System.out.prinln(employee.getClass().getCanonicalName())
+    
+    if (employee instanceof Manager) {
+      employee.setName("João");
+      ((Manager) employee).setLogin("joao");
+      ((Manager) employee).setPassword("123456");
+    }
+  }
+
+}
+```
+
 ### Switch
 
 Apenas uma observação sobre as classes `sealed`, é que se você utilizar um switch em uma variável que é do tipo da classe pai (`Employee`, por exemplo) que é `sealed`, mas pode ser uma instância de alguma subclasse (`Manager` ou `Salesman`, por exemplo), não há a necessidade de uso da palavra reservada `default` no switch, pois na classe pai já foram definidas as classes permitidas para herança. Portanto, essa variável só pode ser uma instância das classes permitidas (`Manager` ou `Salesman`). O switch só vai exigir que você implemente o case das classes permitidas neste caso.
