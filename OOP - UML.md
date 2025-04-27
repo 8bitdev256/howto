@@ -54,6 +54,23 @@ classDiagram
     Class o-- Student
 ```
 
+## Composition
+
+Implies a relationship where the child cannot exist independent of the parent. Example: House (parent) and Room (child). Rooms don't exist separate to a House.
+
+```mermaid
+classDiagram
+    class House {
+
+    }
+
+    class Room {
+
+    }
+
+    House \*-- Room
+```
+
 # Other Example
 
 ```mermaid
