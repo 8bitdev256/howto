@@ -43,15 +43,15 @@ Implies a relationship where the child can exist independently of the parent. Ex
 
 ```mermaid
 classDiagram
-    class Student {
-
-    }
-
     class Class {
 
     }
 
-    Student o-- Class
+    class Student {
+
+    }
+
+    Class o-- Student
 ```
 
 # Other Example
