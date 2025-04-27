@@ -81,7 +81,7 @@ classDiagram
  - 0..n zero to n (where n>1)
  - 1..n one to n (where n>1)
 
-```
+```mermaid
 classDiagram
     Customer "1" --> "*" Ticket
     Student "1" --> "1..*" Course
