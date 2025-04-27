@@ -6,22 +6,24 @@ Relationship between two objects
 
 ### Simple Association
 
+A person has an address
+
 ```mermaid
 classDiagram
-    class ClassA {
+    class Person {
 
     }
 
-    class ClassB {
+    class Address {
 
     }
 
-    ClassA <-- ClassB
+    Person <-- Address
 ```
 
 ### Bidirectional Association
 
-owners feed pets, pets please owners
+Owners feed pets, pets please owners
 
 ```mermaid
 classDiagram
