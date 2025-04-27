@@ -1,0 +1,9 @@
+# Classe Anônima
+
+É uma classe que é declarada no momento em que é instanciada. Exemplo:
+
+```
+public class Main {
+  
+}
+```
