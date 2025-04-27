@@ -37,3 +37,97 @@ public class EquipamentoMultifuncional implements Impressora, Copiadora, Digital
 
 ### Interfaces funcionais
 
+São a base para criação do lambda. Só podem possuir um método obrigatório para implementar, mas podem possuir vários métodos `default`.
+
+```
+public class Main {
+	public static void main(String[] args) {
+		List<User> users = List.of(new User("Maria", 21), new User("João", 32));
+		
+		//Esta interface Consumer é do próprio Java
+
+		//Module java.base
+		//Package java.util.function
+		//Interface Consumer<T>
+		//
+		//    Type Parameters:
+		//      T - the type of the input to the operation
+		//
+		//    All Known Subinterfaces:
+		//        Stream.Builder<T>
+		//
+		//    Functional Interface:
+		//        This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.
+		//
+		//    @FunctionalInterface
+		//    public interface Consumer<T>
+		//
+		//    Represents an operation that accepts a single input argument and returns no result. Unlike most other functional interfaces, Consumer is expected to operate via side-effects.
+		//
+		//    This is a functional interface whose functional method is accept(Object).
+
+		//Classe anônima de nome consumer que implementa a interface Consumer do Java
+		var consumer = new Consumer<User>() {
+			@Override
+			public void accept(final User user) {
+				System.out.println(user);
+			}
+		};
+
+		users.foreach(consumer);
+	}
+}
+```
+
+O código acima pode ser simplificado para o código abaixo: 
+
+```
+public class Main {
+	public static void main(String[] args) {
+		List<User> users = List.of(new User("Maria", 21), new User("João", 32));
+		
+		users.foreach((User user) -> {
+			System.out.println(user);
+		});
+	}
+}
+```
+
+Pode ser mais simplificado ainda:
+
+```
+public class Main {
+	public static void main(String[] args) {
+		List<User> users = List.of(new User("Maria", 21), new User("João", 32));
+		
+		users.foreach(user -> {
+			System.out.println(user);
+		});
+	}
+}
+```
+
+Como o código acima vai executar apenas uma linha dentro do `foreach` (`System.out.println(user);`), podemos simplificar mais uma vez:
+
+```
+public class Main {
+	public static void main(String[] args) {
+		List<User> users = List.of(new User("Maria", 21), new User("João", 32));
+		
+		users.foreach(user -> System.out.println(user));
+	}
+}
+```
+
+Ou, se você preferir, pode ser simplificado ainda mais usando method reference:
+
+
+```
+public class Main {
+	public static void main(String[] args) {
+		List<User> users = List.of(new User("Maria", 21), new User("João", 32));
+		
+		users.foreach(System.out::println);
+	}
+}
+```
