@@ -4,6 +4,23 @@
 
 ```
 public class Main {
-  
+  public static void Main(String[] args) {
+    var musicPlayer = new MusicPlayer() {
+        @Override
+        public void playMusic() {
+
+        }
+
+        @Override
+        public void pauseMusic() {
+
+        }
+
+        @Override
+        public void stopMusic() {
+            
+        }
+    };
+  }
 }
 ```
