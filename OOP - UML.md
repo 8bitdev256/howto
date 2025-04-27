@@ -47,11 +47,11 @@ classDiagram
 
     }
 
-    class Parent {
+    class Class {
 
     }
 
-    Student o-- Parent
+    Student o-- Class
 ```
 
 # Other Example
