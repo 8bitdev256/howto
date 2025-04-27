@@ -1,5 +1,11 @@
 # OOP - UML (Made with Mermaid)
 
+## Association
+
+Relationship between two objects
+
+### Simple Association
+
 ```mermaid
 classDiagram
     class ClassA {
