@@ -88,6 +88,13 @@ classDiagram
     Galaxy --> "many" Star : Contains
 ```
 
+## Visibility
+
+ - + Public
+ - - Private
+ - \# Protected
+ - ~ Package/Internal
+
 # Other Example
 
 ```mermaid
