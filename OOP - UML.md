@@ -39,19 +39,19 @@ classDiagram
 ```
 ## Aggregation
 
-Aggregation implies a relationship where the child can exist independently of the parent.
+Implies a relationship where the child can exist independently of the parent. Example: Class (parent) and Student (child). Delete the Class and the Students still exist.
 
 ```mermaid
 classDiagram
-    class ClassA {
+    class Student {
 
     }
 
-    class ClassB {
+    class Parent {
 
     }
 
-    ClassA o-- ClassB
+    Student o-- Parent
 ```
 
 # Other Example
