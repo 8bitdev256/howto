@@ -19,6 +19,21 @@ classDiagram
     ClassA <|-- ClassB
 ```
 
+### Bidirectional Association
+
+```mermaid
+classDiagram
+    class ClassA {
+
+    }
+
+    class ClassB {
+
+    }
+
+    ClassA <|--|> ClassB
+```
+
 # Other Example
 
 ```mermaid
