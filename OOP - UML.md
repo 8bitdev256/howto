@@ -16,7 +16,7 @@ classDiagram
 
     }
 
-    ClassA <|-- ClassB
+    ClassA <-- ClassB
 ```
 
 ### Bidirectional Association
@@ -31,7 +31,7 @@ classDiagram
 
     }
 
-    ClassA <|--|> ClassB
+    ClassA <--> ClassB
 ```
 
 # Other Example
