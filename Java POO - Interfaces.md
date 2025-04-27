@@ -34,3 +34,6 @@ public class EquipamentoMultifuncional implements Impressora, Copiadora, Digital
 	}
 }
 ```
+
+Todas as propriedades (variáveis) que vamos declarar em uma interface são por padrão `public`, `static` e `final`. Por tanto, usar estas palavras reservadas para declarar uma propriedade dentro de uma interface é redundante.
+
