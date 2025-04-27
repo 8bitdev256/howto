@@ -1,4 +1,17 @@
-# OOP - UML
+# OOP - UML (Made with Mermaid)
+
+```mermaid
+classDiagram
+    class ClassA {
+
+    }
+
+    class ClassB {
+
+    }
+
+    ClassA <|-- ClassB
+```
 
 ```mermaid
 classDiagram
