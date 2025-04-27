@@ -21,19 +21,23 @@ classDiagram
 
 ### Bidirectional Association
 
+owners feed pets, pets please owners
+
 ```mermaid
 classDiagram
-    class ClassA {
-
+    class Owner {
+        +feed
     }
 
-    class ClassB {
-
+    class Pet {
+        +please
     }
 
     ClassA <--> ClassB
 ```
 ## Aggregation
+
+Aggregation implies a relationship where the child can exist independently of the parent.
 
 ```mermaid
 classDiagram
