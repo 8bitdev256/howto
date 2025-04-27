@@ -33,7 +33,7 @@ classDiagram
         +please
     }
 
-    ClassA <--> ClassB
+    Owner <--> Pet
 ```
 ## Aggregation
 
