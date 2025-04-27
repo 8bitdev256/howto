@@ -13,6 +13,8 @@ classDiagram
     ClassA <|-- ClassB
 ```
 
+# Other Example
+
 ```mermaid
 classDiagram
     class ReprodutorMusical {
