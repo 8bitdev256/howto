@@ -1,4 +1,4 @@
-# Java POO - UML
+# OOP - UML
 
 ```mermaid
 classDiagram
