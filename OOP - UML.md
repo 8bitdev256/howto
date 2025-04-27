@@ -1,5 +1,7 @@
 # OOP - UML (Made with [Mermaid](https://mermaid.js.org/))
 
+More information about Mermaid/UML check [Mermaid](https://mermaid.js.org/) website
+
 ## Association
 
 Relationship between two objects
@@ -69,55 +71,4 @@ classDiagram
     }
 
     House *-- Room
-```
-
-## Cardinality / Multiplicity on relations
-
- - 1 Only 1
- - 0..1 Zero or One
- - 1..* One or more
- - * Many
- - n n (where n>1)
- - 0..n zero to n (where n>1)
- - 1..n one to n (where n>1)
-
-```mermaid
-classDiagram
-    Customer "1" --> "*" Ticket
-    Student "1" --> "1..*" Course
-    Galaxy --> "many" Star : Contains
-```
-
-## Visibility
-
- - + Public
- - - Private
- - \# Protected
- - ~ Package/Internal
-
-# Other Example
-
-```mermaid
-classDiagram
-    class ReprodutorMusical {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
-
-    class AparelhoTelefonico {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
-
-    class NavegadorInternet {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
-
-    class iPhone {
-    }
-
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
 ```
