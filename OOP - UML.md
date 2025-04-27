@@ -68,7 +68,7 @@ classDiagram
 
     }
 
-    House --\* Room
+    House *-- Room
 ```
 
 # Other Example
