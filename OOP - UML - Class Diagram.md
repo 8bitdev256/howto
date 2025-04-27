@@ -1,4 +1,4 @@
-# OOP - UML (Made with [Mermaid](https://mermaid.js.org/))
+# OOP - UML - Class Diagram (Made with [Mermaid](https://mermaid.js.org/))
 
 More information about Mermaid/UML check [Mermaid](https://mermaid.js.org/) website
 
