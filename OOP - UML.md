@@ -18,7 +18,7 @@ classDiagram
 
     }
 
-    Person <-- Address
+    Person --> Address
 ```
 
 ### Bidirectional Association
