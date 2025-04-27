@@ -33,6 +33,20 @@ classDiagram
 
     ClassA <--> ClassB
 ```
+## Aggregation
+
+```mermaid
+classDiagram
+    class ClassA {
+
+    }
+
+    class ClassB {
+
+    }
+
+    ClassA o-- ClassB
+```
 
 # Other Example
 
